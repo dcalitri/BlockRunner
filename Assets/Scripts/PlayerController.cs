@@ -14,12 +14,16 @@ public class PlayerController : MonoBehaviour
     public AudioClip pickUpSound;
     public bool isOnGround = true;
     public bool isGameOver = false;
+    
+    public float moveSpeed;
+    private Vector3 targetPos;
     // Start is called before the first frame update
     void Start()
     {
         playerAudio = GetComponent<AudioSource>();
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
+        targetPos = transform.position;
     }
 
     // Update is called once per frame
@@ -32,6 +36,13 @@ public class PlayerController : MonoBehaviour
             isOnGround = false;
             playerAudio.PlayOneShot(jumpSound, 1.0f);
         }
+        
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+    }
+    public void Move(Vector3 moveDirection)
+    {
+        targetPos += moveDirection;
+        playerAudio.PlayOneShot(dodgeSound, 1.0f);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -47,6 +58,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Ball"))
         {
+            Destroy(collision.gameObject);
             playerAudio.PlayOneShot(pickUpSound, 1.0f);
         }
     }

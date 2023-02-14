@@ -5,11 +5,14 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject obstaclePrefab;
+    public GameObject ballPrefab;
     private Vector3 spawnPos;
     private float spawnRangeX = 2;
     private float spawnPosZ = 10;
     private float startDelay = 2;
     private float repeatRate = 2;
+    private float startDelay2 = 10;
+    private float repeatRate2 = 10;
     private PlayerController playerController;
 
     // Start is called before the first frame update
@@ -17,6 +20,7 @@ public class SpawnManager : MonoBehaviour
     {
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
         InvokeRepeating("SpawnObstacles", startDelay, repeatRate);
+        InvokeRepeating("SpawnBalls", startDelay2, repeatRate2);
     }
 
     // Update is called once per frame
@@ -31,6 +35,15 @@ public class SpawnManager : MonoBehaviour
         {
             spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 1, spawnPosZ);
             Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
+        }
+    }
+
+    void SpawnBalls()
+    {
+        if (playerController.isGameOver == false)
+        {
+            spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 1, spawnPosZ);
+            Instantiate(ballPrefab, spawnPos, obstaclePrefab.transform.rotation);
         }
     }
 }

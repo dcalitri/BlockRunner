@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2652046048330890458}
   - component: {fileID: 1019334561173457292}
   - component: {fileID: 4776332142795057051}
+  - component: {fileID: 1016671352321954840}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Obstacle
@@ -127,3 +128,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!135 &1016671352321954840
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2652046048330890457}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
