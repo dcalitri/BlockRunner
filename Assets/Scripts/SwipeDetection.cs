@@ -31,30 +31,15 @@ public class SwipeDetection : MonoBehaviour
                 isFingerDown = false;
                 playerController.Move(Vector3.right);
             }
+            else if (Input.touches[0].position.x <= startPos.x + swipeDistance)
+            {
+                isFingerDown = false;
+                playerController.Move(Vector3.left);
+            }
 
             if (isFingerDown && Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended)
             {
                 isFingerDown = false;
-            }
-
-            if (!isFingerDown && Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
-            {
-                startPos = Input.touches[0].position;
-                isFingerDown = true;
-            }
-
-            if (isFingerDown)
-            {
-                if (Input.touches[0].position.x <= startPos.x + swipeDistance)
-                {
-                    isFingerDown = false;
-                    playerController.Move(Vector3.left);
-                }
-
-                if (isFingerDown && Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended)
-                {
-                    isFingerDown = false;
-                }
             }
         }
     }
