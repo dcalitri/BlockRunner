@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2072a177572b0f40b0db129cc6a1846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 20
   gravityModifier: 1.5
   jumpSound: {fileID: 8300000, guid: 7c245f5c788115046b2d277ba2ca8ecc, type: 3}
   dodgeSound: {fileID: 8300000, guid: 0a77032156c9e0140821c33e1e8027c8, type: 3}
