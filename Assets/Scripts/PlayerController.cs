@@ -30,15 +30,7 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (Input.touchCount > 0 && isOnGround && !isGameOver)
-        {
-            Touch touch = Input.GetTouch(0);
-            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isOnGround = false;
-            playerAudio.PlayOneShot(jumpSound, 1.0f);
-        }
-        
+    {   
         transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
     }
     public void Move(Vector3 moveDirection)
@@ -49,6 +41,14 @@ public class PlayerController : MonoBehaviour
             playerAudio.PlayOneShot(dodgeSound, 1.0f);
         }
         
+    }
+
+    public void Jump()
+    {
+        Touch touch = Input.GetTouch(0);
+        playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        isOnGround = false;
+        playerAudio.PlayOneShot(jumpSound, 1.0f);
     }
 
     private void OnCollisionEnter(Collision collision)
