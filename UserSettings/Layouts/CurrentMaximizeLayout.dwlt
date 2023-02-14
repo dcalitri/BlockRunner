@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 8866
+  controlID: 15623
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -57,7 +57,7 @@ MonoBehaviour:
   m_SerializedViewNames:
   - UnityEditor.GameView
   m_SerializedViewValues:
-  - C:\Users\dcali\OneDrive\Documents\Domenic Calitri Unity Projects\Block Runner\Library\PlayModeViewStates\38aa74253e9a6534ba1d07ad52441944
+  - C:\Users\dcali\OneDrive\Documents\Domenic Calitri Unity Projects\Block Runner\Library\PlayModeViewStates\f6a3480a0b4307043964d1b81b57fac7
   m_PlayModeViewName: Device Simulator
   m_ShowGizmos: 0
   m_TargetDisplay: 0
@@ -78,9 +78,9 @@ MonoBehaviour:
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
     pluginStates:
     - '{}'
-    scale: 10
-    fitToScreenEnabled: 1
-    rotationDegree: 0
+    scale: 12
+    fitToScreenEnabled: 0
+    rotationDegree: 180
     highlightSafeAreaEnabled: 0
     friendlyName: Samsung Galaxy S7
     networkReachability: 1
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 8851
+  controlID: 15602
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -361,9 +361,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.99700254, y: -4.659429, z: 4.271587}
+    m_Target: {x: -122.721115, y: -118.30612, z: -133.58127}
     speed: 2
-    m_Value: {x: -0.99700254, y: -4.659429, z: 4.271587}
+    m_Value: {x: -122.721115, y: -118.30612, z: -133.58127}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -410,13 +410,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.38172865, y: 0.29064223, z: -0.12781417, w: -0.8680297}
+    m_Target: {x: -0.36885098, y: 0.09373239, z: -0.0374172, w: -0.923994}
     speed: 2
-    m_Value: {x: -0.38172832, y: 0.290642, z: -0.12781407, w: -0.868029}
+    m_Value: {x: -0.36885068, y: 0.09373231, z: -0.03741717, w: -0.92399323}
   m_Size:
-    m_Target: 6.5671415
+    m_Target: 319.31213
     speed: 2
-    m_Value: 6.5671415
+    m_Value: 319.31213
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -491,7 +491,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 8867
+  controlID: 15579
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -551,7 +551,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 32fbffffbe590000
+      m_ExpandedIDs: a28fffff32fbffffbe590000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -682,23 +682,23 @@ MonoBehaviour:
       m_ResourceFile: 
   m_AssetTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: be590000
+    m_SelectedIDs: b48fffff
     m_LastClickedID: 0
     m_ExpandedIDs: ffffffff00000000345a0000365a0000385a00003a5a0000745a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: PlayerController
-      m_OriginalName: PlayerController
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 26022
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -709,8 +709,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: be590000
-    m_LastClickedInstanceID: 22974
+    m_SelectedInstanceIDs: b48fffff
+    m_LastClickedInstanceID: -28748
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -764,7 +764,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 8792
+  controlID: 15624
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -784,8 +784,8 @@ MonoBehaviour:
     y: 0
     width: 372.80005
     height: 481.6
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -825,8 +825,8 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 22974
-  m_LastVerticalScrollValue: 586.4001
+  m_LastInspectedObjectInstanceID: -28748
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
