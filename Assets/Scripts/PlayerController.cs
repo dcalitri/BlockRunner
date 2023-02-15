@@ -14,8 +14,6 @@ public class PlayerController : MonoBehaviour
     public AudioClip pickUpSound;
     public bool isOnGround = true;
     public bool isGameOver = false;
-    private int leftBound = -2;
-    private int rightBound = 2;
 
     public float moveSpeed;
     private Vector3 targetPos;
@@ -35,17 +33,13 @@ public class PlayerController : MonoBehaviour
     }
     public void Move(Vector3 moveDirection)
     {
-        if(transform.position.x > rightBound && transform.position.x < leftBound)
-        {
-            targetPos += moveDirection;
-            playerAudio.PlayOneShot(dodgeSound, 1.0f);
-        }
+        targetPos += moveDirection;
+        playerAudio.PlayOneShot(dodgeSound, 1.0f);
         
     }
 
     public void Jump()
     {
-        Touch touch = Input.GetTouch(0);
         playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         isOnGround = false;
         playerAudio.PlayOneShot(jumpSound, 1.0f);
