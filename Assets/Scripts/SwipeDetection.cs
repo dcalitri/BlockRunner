@@ -38,7 +38,7 @@ public class SwipeDetection : MonoBehaviour
                     playerController.Jump();
                     Debug.Log("Swipe Up");
                 }
-                
+
                 else if (Input.touches[0].position.x >= startPos.x + swipeDistance && player.transform.position.x >= xRange)
                 {
                     isFingerDown = false;
@@ -51,13 +51,13 @@ public class SwipeDetection : MonoBehaviour
                     playerController.Move(Vector3.left);
                     Debug.Log("Swipe Left");
                 }
-            
 
-                if (isFingerDown && Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended)
-                {
-                    isFingerDown = false;
-                }
-            
+
+            }
+            if (isFingerDown && Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended)
+            {
+                isFingerDown = false;
+            }
         }
     }
 }
