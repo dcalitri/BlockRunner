@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI sizeText;
     public TextMeshProUGUI mainMenu;
     public TextMeshProUGUI gameOverScreen;
+    public int size;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        sizeText.text = "Size: " + size;
     }
 
     public void StartGame()
@@ -37,5 +39,10 @@ public class GameManager : MonoBehaviour
             isGameActive = false;
             gameOverScreen.enabled = true;
         }
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
