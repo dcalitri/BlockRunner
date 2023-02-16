@@ -48,8 +48,12 @@ public class PlayerController : MonoBehaviour
     public void Move(Vector3 moveDirection)
     {
         targetPos += moveDirection;
-        playerAudio.PlayOneShot(dodgeSound, 1.0f);
         
+        if (transform.position.x > xRange && transform.position.x < -xRange)
+        {
+            playerAudio.PlayOneShot(dodgeSound, 1.0f);
+        }
+
     }
 
     public void Jump()
