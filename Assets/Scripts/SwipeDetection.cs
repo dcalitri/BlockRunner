@@ -7,7 +7,6 @@ public class SwipeDetection : MonoBehaviour
     bool isFingerDown;
     private Vector2 startPos;
     private int swipeDistance = 10;
-    private int xRange = 2;
     public GameObject player;
     public GameManager gameManager;
     private Touch touch;
@@ -38,21 +37,27 @@ public class SwipeDetection : MonoBehaviour
                     playerController.Jump();
                     Debug.Log("Swipe Up");
                 }
+                
+                if (Input.touches[0].position.y <= startPos.y - swipeDistance)
+                {
+                    isFingerDown = false;
+                    Debug.Log("Swipe Down");
+                }
 
-                else if (Input.touches[0].position.x >= startPos.x + swipeDistance && player.transform.position.x >= xRange)
+
+                if (Input.touches[0].position.x >= startPos.x + swipeDistance)
                 {
                     isFingerDown = false;
                     playerController.Move(Vector3.right);
                     Debug.Log("Swipe Right");
                 }
-                else if (Input.touches[0].position.x <= startPos.x - swipeDistance && player.transform.position.x <= -xRange)
+                
+                if (Input.touches[0].position.x <= startPos.x - swipeDistance)
                 {
                     isFingerDown = false;
                     playerController.Move(Vector3.left);
                     Debug.Log("Swipe Left");
                 }
-
-
             }
             if (isFingerDown && Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended)
             {

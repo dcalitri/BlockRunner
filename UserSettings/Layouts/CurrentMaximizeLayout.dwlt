@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 29815
+  controlID: 33157
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -79,7 +79,7 @@ MonoBehaviour:
     pluginStates:
     - '{}'
     scale: 10
-    fitToScreenEnabled: 0
+    fitToScreenEnabled: 1
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
     friendlyName: Samsung Galaxy S7
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 29744
+  controlID: 33158
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -100, y: -25.600006}
+      snapOffset: {x: -101, y: -26}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
@@ -361,9 +361,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 9.435852, y: 1.1951442, z: 1.9551519}
+    m_Target: {x: 4.522196, y: 1.1494954, z: 2.022894}
     speed: 2
-    m_Value: {x: 9.435852, y: 1.1951442, z: 1.9551519}
+    m_Value: {x: 4.522196, y: 1.1494954, z: 2.022894}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -414,9 +414,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.26093203, y: 0.0092692925, z: -0.0025054752, w: 0.96530944}
   m_Size:
-    m_Target: 4.3225784
+    m_Target: 9.95741
     speed: 2
-    m_Value: 4.3225784
+    m_Value: 9.95741
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -491,7 +491,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 29785
+  controlID: 33083
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -551,7 +551,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: be64ffff1cfaffff8e5a0000ea5a0000
+      m_ExpandedIDs: 1cfaffff8e5a0000ea5a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -594,8 +594,8 @@ MonoBehaviour:
     y: 318.4
     width: 307.99994
     height: 404.4
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -641,7 +641,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -681,8 +682,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: be64ffff
+    scrollPos: {x: 0, y: 46.600006}
+    m_SelectedIDs: b05a0000
     m_LastClickedID: 0
     m_ExpandedIDs: ffffffff00000000125c0000145c0000165c0000185c00001c5c00001e5c0000505c0000
     m_RenameOverlay:
@@ -709,8 +710,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: be64ffff
-    m_LastClickedInstanceID: -39746
+    m_SelectedInstanceIDs: b05a0000
+    m_LastClickedInstanceID: 23216
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -764,7 +765,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 29816
+  controlID: 33121
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -784,8 +785,8 @@ MonoBehaviour:
     y: 0
     width: 372.80005
     height: 481.6
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -825,7 +826,7 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -39746
+  m_LastInspectedObjectInstanceID: 23216
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
