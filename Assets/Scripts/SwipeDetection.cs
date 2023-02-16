@@ -32,13 +32,13 @@ public class SwipeDetection : MonoBehaviour
 
             if (isFingerDown)
             {
-                if (Input.touches[0].position.x <= startPos.x - swipeDistance && player.transform.position.x < -xRange)
+                if (Input.touches[0].position.x <= startPos.x - swipeDistance && player.transform.position.x <= -xRange)
                 {
                     isFingerDown = false;
                     playerController.Move(Vector3.left);
                     Debug.Log("Swipe Left");
                 }
-                else if (Input.touches[0].position.x >= startPos.x + swipeDistance && player.transform.position.x > xRange)
+                else if (Input.touches[0].position.x >= startPos.x + swipeDistance && player.transform.position.x >= xRange)
                 {
                     isFingerDown = false;
                     playerController.Move(Vector3.right);
