@@ -1623,6 +1623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac1e25422cec83e46ad5f8acbdcafd89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 155322778}
   playerController: {fileID: 72960773}
 --- !u!4 &754175155
 Transform:
@@ -2007,7 +2008,7 @@ MonoBehaviour:
   distanceText: {fileID: 1939279417}
   sizeText: {fileID: 58684941}
   mainMenu: {fileID: 235656085}
-  gameOverScreen: {fileID: 0}
+  gameOverScreen: {fileID: 148745592}
   size: 0
   distance: 0
 --- !u!4 &1145483178
