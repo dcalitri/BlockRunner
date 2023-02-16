@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed;
     private Vector3 targetPos;
-    private int xRange = 1;
+    private int xRange = 2;
     public GameObject player;
 
     // Start is called before the first frame update

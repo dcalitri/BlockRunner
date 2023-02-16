@@ -13,16 +13,15 @@ public class SpawnManager : MonoBehaviour
     private float repeatRate = 2;
     private float startDelay2 = 5;
     private float repeatRate2 = 10;
-    private PlayerController playerController;
+    public PlayerController playerController;
     private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
         InvokeRepeating("SpawnObstacles", startDelay, repeatRate);
         InvokeRepeating("SpawnBalls", startDelay2, repeatRate2);
-        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -35,7 +34,7 @@ public class SpawnManager : MonoBehaviour
     {
         if (playerController.isGameOver == false && gameManager.isGameActive == true)
         {
-            spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 1, spawnPosZ);
+            spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0f, spawnPosZ);
             Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
         }
     }
