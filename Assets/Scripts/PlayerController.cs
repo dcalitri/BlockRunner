@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed;
     private Vector3 targetPos;
+    private int xRange = 2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,13 +27,23 @@ public class PlayerController : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
         targetPos = transform.position;
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();    
     }
 
     // Update is called once per frame
     void Update()
     {   
         transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+        
+        if (transform.position.x > xRange)
+        {
+            transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.x < -xRange)
+        {
+            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
+        }
     }
     public void Move(Vector3 moveDirection)
     {

@@ -19,6 +19,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        if (isGameActive == true)
+        {
+            StartCoroutine(IncreaseDistance());
+        }
     }
 
     // Update is called once per frame
@@ -26,7 +30,7 @@ public class GameManager : MonoBehaviour
     {
         sizeText.text = "Size: " + size;
         distanceText.text = "Distance: " + distance;
-        StartCoroutine(IncreaseDistance());
+        
     }
 
     public void StartGame()

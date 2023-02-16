@@ -7,8 +7,9 @@ public class SwipeDetection : MonoBehaviour
     bool isFingerDown;
     private Vector3 startPos;
     private int swipeDistance = 10;
-    private int leftBound = -2;
-    private int rightBound = 2;
+    private int xRange = 2;
+    public GameObject player;
+
 
     public PlayerController playerController;
     // Start is called before the first frame update
@@ -29,17 +30,17 @@ public class SwipeDetection : MonoBehaviour
 
         if (isFingerDown)
         {
-            if (Input.touches[0].position.x <= startPos.x + swipeDistance && transform.position.x >= rightBound)
-            {
-                isFingerDown = false;
-                playerController.Move(Vector3.right);
-                Debug.Log("Swipe Right");
-            }
-            else if (Input.touches[0].position.x >= startPos.x + swipeDistance && transform.position.x <= leftBound)
+            if (Input.touches[0].position.x <= startPos.x + swipeDistance && player.transform.position.x < -xRange)
             {
                 isFingerDown = false;
                 playerController.Move(Vector3.left);
                 Debug.Log("Swipe Left");
+            }
+            else if (Input.touches[0].position.x >= startPos.x + swipeDistance && player.transform.position.x > xRange)
+            {
+                isFingerDown = false;
+                playerController.Move(Vector3.right);
+                Debug.Log("Swipe Right");
             }
             else if (Input.touches[0].position.y >= startPos.y + swipeDistance)
             {
