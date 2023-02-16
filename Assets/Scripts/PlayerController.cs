@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip pickUpSound;
     public bool isOnGround = true;
     public bool isGameOver = false;
+    private GameManager gameManager;
 
     public float moveSpeed;
     private Vector3 targetPos;
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
         targetPos = transform.position;
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -59,6 +61,7 @@ public class PlayerController : MonoBehaviour
         else if (collision.gameObject.CompareTag("Ball"))
         {
             Destroy(collision.gameObject);
+            gameManager.size += 1;
             playerAudio.PlayOneShot(pickUpSound, 1.0f);
         }
     }

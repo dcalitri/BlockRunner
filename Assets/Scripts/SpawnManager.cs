@@ -11,7 +11,7 @@ public class SpawnManager : MonoBehaviour
     private float spawnPosZ = 10;
     private float startDelay = 2;
     private float repeatRate = 2;
-    private float startDelay2 = 10;
+    private float startDelay2 = 5;
     private float repeatRate2 = 10;
     private PlayerController playerController;
 

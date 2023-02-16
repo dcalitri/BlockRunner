@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI mainMenu;
     public TextMeshProUGUI gameOverScreen;
     public int size;
+    public int distance;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         sizeText.text = "Size: " + size;
+        distanceText.text = "Distance: " + distance;
+        StartCoroutine(IncreaseDistance());
     }
 
     public void StartGame()
@@ -44,5 +47,11 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    IEnumerator IncreaseDistance()
+    {
+        yield return new WaitForSeconds(1);
+        distance++;
     }
 }
