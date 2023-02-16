@@ -7,7 +7,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject obstaclePrefab;
     public GameObject ballPrefab;
     private Vector3 spawnPos;
-    private float spawnRangeX = 2;
+    private float spawnRangeX = 1;
     private float spawnPosZ = 10;
     private float startDelay = 2;
     private float repeatRate = 2;

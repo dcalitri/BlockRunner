@@ -7,7 +7,7 @@ public class SwipeDetection : MonoBehaviour
     bool isFingerDown;
     private Vector2 startPos;
     private int swipeDistance = 10;
-    private int xRange = 2;
+    private int xRange = 1;
     public GameObject player;
     public GameManager gameManager;
 

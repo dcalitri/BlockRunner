@@ -18,7 +18,8 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed;
     private Vector3 targetPos;
-    private int xRange = 2;
+    private int xRange = 1;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -72,6 +73,7 @@ public class PlayerController : MonoBehaviour
         else if (collision.gameObject.CompareTag("Ball"))
         {
             Destroy(collision.gameObject);
+            transform.localScale += new Vector3(0, 1.4f, 0);
             gameManager.size += 1;
             playerAudio.PlayOneShot(pickUpSound, 1.0f);
         }
