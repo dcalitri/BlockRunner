@@ -1624,6 +1624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 155322778}
+  gameManager: {fileID: 1145483177}
   playerController: {fileID: 72960773}
 --- !u!4 &754175155
 Transform:
