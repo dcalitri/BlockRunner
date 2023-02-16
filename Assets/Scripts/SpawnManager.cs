@@ -41,7 +41,7 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnBalls()
     {
-        if (playerController.isGameOver == false)
+        if (playerController.isGameOver == false && gameManager.isGameActive == true)
         {
             spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 1, spawnPosZ);
             Instantiate(ballPrefab, spawnPos, obstaclePrefab.transform.rotation);

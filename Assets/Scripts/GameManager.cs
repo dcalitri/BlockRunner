@@ -15,47 +15,51 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameOverScreen;
     public int size;
     public int distance;
+
     // Start is called before the first frame update
     void Start()
     {
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
-        if (isGameActive == true)
-        {
-            StartCoroutine(IncreaseDistance());
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
         sizeText.text = "Size: " + size;
-        distanceText.text = "Distance: " + distance;
-        
     }
 
     public void StartGame()
     {
         isGameActive = true;
         playerController.isGameOver = false;
+        if (isGameActive == true)
+        {
+            StartCoroutine(IncreaseDistance());
+        }
     }
 
     public void GameOver()
     {
-        if (playerController.isGameOver == true)
-        {
-            isGameActive = false;
-            gameOverScreen.enabled = true;
-        }
+        isGameActive = false;
+        gameOverScreen.gameObject.SetActive(true);
     }
 
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
+    public void UpdateDistance()
+    {
+        distanceText.text = $"Distance: " + distance;
+    }
     IEnumerator IncreaseDistance()
     {
-        yield return new WaitForSeconds(1);
-        distance++;
+        while (isGameActive)
+        {
+            UpdateDistance();
+
+            yield return new WaitForSeconds(1);
+            distance++;
+        }
     }
 }

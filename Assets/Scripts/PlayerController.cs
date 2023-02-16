@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
         else if (collision.gameObject.CompareTag("Obstacle"))
         {
             isGameOver = true;
+            gameManager.GameOver();
             playerAudio.PlayOneShot(deathSound, 1.0f);
         }
         else if (collision.gameObject.CompareTag("Ball"))
