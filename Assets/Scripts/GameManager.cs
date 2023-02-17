@@ -51,11 +51,6 @@ public class GameManager : MonoBehaviour
     }
     void CheckHighScore()
     {
-        if (distance > PlayerPrefs.GetInt("Largest Size", 0))
-        {
-            PlayerPrefs.SetInt("Largest Size", size);
-        }
-
         if (size > PlayerPrefs.GetInt("Best Distance", 0))
         {
             PlayerPrefs.SetInt("Best Distance", distance);
