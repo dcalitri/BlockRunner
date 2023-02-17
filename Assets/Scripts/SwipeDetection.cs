@@ -38,12 +38,12 @@ public class SwipeDetection : MonoBehaviour
                     Debug.Log("Swipe Up");
                 }
                 
-                if (Input.touches[0].position.y <= startPos.y - swipeDistance)
+               /* if (Input.touches[0].position.y <= startPos.y - swipeDistance)
                 {
                     isFingerDown = false;
                     Debug.Log("Swipe Down");
                 }
-
+               */
 
                 if (Input.touches[0].position.x >= startPos.x + swipeDistance)
                 {
