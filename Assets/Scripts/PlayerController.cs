@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
-    public float jumpForce = 10;
+    public float jumpForce = 20;
     public float gravityModifier;
     private AudioSource playerAudio;
     public AudioClip jumpSound;
