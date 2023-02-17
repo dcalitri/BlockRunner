@@ -77,6 +77,15 @@ public class PlayerController : MonoBehaviour
             transform.localScale += new Vector3(0, 1.4f, 0);
             gameManager.size += 1;
             playerAudio.PlayOneShot(pickUpSound, 1.0f);
+            if (gameManager.size > PlayerPrefs.GetInt("Largest Size", 0))
+            {
+                PlayerPrefs.SetInt("Largest Size", gameManager.size);
+            } 
         }
+    }
+
+    public void UpdateHighScoreSize()
+    {
+        gameManager.largestSize.text = $"Largest Size: {PlayerPrefs.GetInt("Largest Size", 0)}";
     }
 }

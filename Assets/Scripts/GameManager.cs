@@ -44,19 +44,23 @@ public class GameManager : MonoBehaviour
     {
         isGameActive = false;
         gameOverScreen.gameObject.SetActive(true);
+        CheckHighScore();
+        farthestDistance.text = $"Farthest Distance: {PlayerPrefs.GetInt("Best Distance", 0)}";
+        largestSize.text = $"Largest Size: {PlayerPrefs.GetInt("Largest Size", 0)}";
+
+    }
+    void CheckHighScore()
+    {
         if (distance > PlayerPrefs.GetInt("Largest Size", 0))
         {
             PlayerPrefs.SetInt("Largest Size", size);
         }
-        largestSize.text = "Largest Size: " + PlayerPrefs.GetInt("Largest Size", 0);
+
         if (size > PlayerPrefs.GetInt("Best Distance", 0))
         {
             PlayerPrefs.SetInt("Best Distance", distance);
         }
-        farthestDistance.text = "Farthest Distance: " + PlayerPrefs.GetInt("Best Distance", 0);
-
     }
-
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -75,5 +79,4 @@ public class GameManager : MonoBehaviour
             distance++;
         }
     }
-    
 }
