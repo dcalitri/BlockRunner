@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameOverScreen;
     public int size;
     public int distance;
+    public TextMeshProUGUI largestSize;
+    public TextMeshProUGUI farthestDistance;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +44,17 @@ public class GameManager : MonoBehaviour
     {
         isGameActive = false;
         gameOverScreen.gameObject.SetActive(true);
+        if (distance > PlayerPrefs.GetInt("Largest Size", 0))
+        {
+            PlayerPrefs.SetInt("Largest Size", size);
+        }
+        largestSize.text = "Largest Size: " + PlayerPrefs.GetInt("Largest Size", 0);
+        if (size > PlayerPrefs.GetInt("Best Distance", 0))
+        {
+            PlayerPrefs.SetInt("Best Distance", distance);
+        }
+        farthestDistance.text = "Farthest Distance: " + PlayerPrefs.GetInt("Best Distance", 0);
+
     }
 
     public void RestartGame()
@@ -62,4 +75,5 @@ public class GameManager : MonoBehaviour
             distance++;
         }
     }
+    
 }
