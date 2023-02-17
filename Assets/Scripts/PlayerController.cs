@@ -83,9 +83,4 @@ public class PlayerController : MonoBehaviour
             } 
         }
     }
-
-    public void UpdateHighScoreSize()
-    {
-        gameManager.largestSize.text = $"Largest Size: {PlayerPrefs.GetInt("Largest Size", 0)}";
-    }
 }
