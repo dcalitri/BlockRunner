@@ -35,16 +35,6 @@ public class PlayerController : MonoBehaviour
     void LateUpdate()
     {   
         transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
-        
-        if (transform.position.x > xRange)
-        {
-            transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
-        }
-
-        if (transform.position.x < -xRange)
-        {
-            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
-        }
     }
     public void Move(Vector3 moveDirection)
     {
