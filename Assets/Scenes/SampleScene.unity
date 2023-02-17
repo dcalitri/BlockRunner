@@ -2382,7 +2382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 20
-  gravityModifier: 1.5
+  gravityModifier: 1
   jumpSound: {fileID: 8300000, guid: 7c245f5c788115046b2d277ba2ca8ecc, type: 3}
   dodgeSound: {fileID: 8300000, guid: 0a77032156c9e0140821c33e1e8027c8, type: 3}
   deathSound: {fileID: 8300000, guid: 6df3f638c5af7b6449825f9646698a66, type: 3}

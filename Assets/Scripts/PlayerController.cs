@@ -42,9 +42,12 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
-        playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        isOnGround = false;
-        playerAudio.PlayOneShot(jumpSound, 1.0f);
+        if(isOnGround)
+        {
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isOnGround = false;
+            playerAudio.PlayOneShot(jumpSound, 1.0f);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -70,5 +73,9 @@ public class PlayerController : MonoBehaviour
                 PlayerPrefs.SetInt("Largest Size", gameManager.size);
             } 
         }
+    }
+    public void UpdateScoreSize()
+    {
+        gameManager.largestSize.text = $"Largest Size: {PlayerPrefs.GetInt("Largest Size", 0)}";
     }
 }

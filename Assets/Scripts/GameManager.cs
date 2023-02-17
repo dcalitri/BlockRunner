@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         gameOverScreen.gameObject.SetActive(true);
         CheckHighScore();
         farthestDistance.text = $"Farthest Distance: {PlayerPrefs.GetInt("Best Distance", 0)}";
-        largestSize.text = $"Largest Size: {PlayerPrefs.GetInt("Largest Size", 0)}";
+        playerController.UpdateScoreSize();
 
     }
     void CheckHighScore()
