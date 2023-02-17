@@ -15,10 +15,8 @@ public class PlayerController : MonoBehaviour
     public bool isOnGround = true;
     public bool isGameOver = false;
     private GameManager gameManager;
-
     public float moveSpeed;
     private Vector3 targetPos;
-    private int xRange = 2;
     public GameObject player;
 
     // Start is called before the first frame update
